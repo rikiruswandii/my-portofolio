@@ -1,23 +1,33 @@
 import Image from "next/image";
+import { useState } from "react";
 
 const Item = (props) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="col-md-6 col-lg-4 mb-5">
+    <div
+      className="col-md-6 col-lg-4 mb-5"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div
-        className="portfolio-item mx-auto"
-        data-bs-toggle="modal"
-        data-bs-target={props.modalTarget}
+        className="relative cursor-pointer rounded overflow-hidden shadow"
+        onClick={props.onOpen}
       >
-        <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-          <div className="portfolio-item-caption-content text-center text-white">
+        <div
+          className={`absolute inset-0 bg-black flex items-center justify-center transition-opacity  duration-300 rounded ${
+            isHovered ? "opacity-75" : "opacity-50"
+          }`}
+        >
+          <div className="text-white text-center">
             <i className="fas fa-plus fa-3x"></i>
           </div>
         </div>
         <Image
-          className="w-full max-h-64 object-cover rounded-t"
+          className="w-full h-64 object-cover rounded"
           src={props.imageSrc}
-          width={500} // Atur lebar gambar sesuai kebutuhan
-          height={300} // Atur tinggi gambar sesuai kebutuhan
+          width={500}
+          height={300}
           alt="..."
         />
       </div>

@@ -1,3 +1,9 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,35 +14,37 @@ const Footer = () => {
           <div className="mb-5 md:mb-0">
             <h4 className="text-uppercase mb-4">Location</h4>
             <p className="lead mb-0">
-              2215 John Daniel Drive
+              Jalan Nuansa Indah Bersamamu No.12
               <br />
-              Clark, MO 65243
+              Asgard 21314
             </p>
           </div>
           {/* Footer Social Icons */}
-          <div className="mb-5 md:mb-0">
-            <h4 className="text-uppercase mb-4">Around the Web</h4>
-            <div className="flex justify-center">
-              <a className="btn btn-outline-light btn-social mx-1" href="#!">
-                <i className="fab fa-fw fa-facebook-f"></i>
+          <div className="mb-5 md:mb-0 text-center">
+            <h4 className="text-uppercase mb-4">Social Media</h4>
+            <div className="flex justify-center space-x-4">
+              <a className="text-white hover:text-blue-500" href="#!">
+                <FaFacebookF className="w-6 h-6" />
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="#!">
-                <i className="fab fa-fw fa-twitter"></i>
+              <a className="text-white hover:text-pink-500" href="#!">
+                <FaInstagram className="w-6 h-6" />
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="#!">
-                <i className="fab fa-fw fa-linkedin-in"></i>
+              <a className="text-white hover:text-blue-400" href="#!">
+                <FaTwitter className="w-6 h-6" />
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="#!">
-                <i className="fab fa-fw fa-dribbble"></i>
+              <a className="text-white hover:text-red-500" href="#!">
+                <FaEnvelope className="w-6 h-6" />
               </a>
             </div>
           </div>
           {/* Footer About Text */}
           <div>
-            <h4 className="text-uppercase mb-4">About Freelancer</h4>
+            <h4 className="text-uppercase mb-4">About Me</h4>
             <p className="lead mb-0">
-              Freelance is a free to use, MIT licensed Bootstrap theme created
-              by <a href="http://startbootstrap.com">Start Bootstrap</a>.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ab
+              sit non sint autem voluptatibus aliquam similique doloremque
+              beatae, minima voluptas eius id debitis, veniam perspiciatis.
+              Dolorum ipsa et commodi!
             </p>
           </div>
         </div>

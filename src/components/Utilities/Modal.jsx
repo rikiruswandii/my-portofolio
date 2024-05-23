@@ -1,58 +1,60 @@
 import Image from "next/image";
 
 const Modal = (props) => {
-    return (
-      <div
-        className="portfolio-modal modal fade"
-        id={props.modalId}
-        tabIndex="-1"
-        aria-labelledby={props.modalId}
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-xl">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                className="btn-close"
-                type="button"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+  return (
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center ${
+        props.isOpen ? "block" : "hidden"
+      }`}
+      aria-labelledby={props.modalId}
+      aria-hidden={!props.isOpen}
+    >
+      <div className="fixed inset-0 bg-black bg-opacity-50"></div>
+      <div className="relative w-auto max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="flex justify-end p-4 border-b border-gray-200">
+          <button
+            className="text-gray-500 hover:text-gray-700"
+            type="button"
+            onClick={props.onClose}
+            aria-label="Close"
+          >
+            <i className="fas fa-times"></i>
+          </button>
+        </div>
+        <div className="p-6 text-center">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            {props.title}
+          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <div className="border-t border-gray-300 flex-grow mr-2"></div>
+            <div className="text-gray-500">
+              <i className="fas fa-star"></i>
             </div>
-            <div className="modal-body text-center pb-5">
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    <h2 className="portfolio-modal-title text-secondary text-uppercase mb-0">
-                      {props.title}
-                    </h2>
-                    <div className="divider-custom">
-                      <div className="divider-custom-line"></div>
-                      <div className="divider-custom-icon">
-                        <i className="fas fa-star"></i>
-                      </div>
-                      <div className="divider-custom-line"></div>
-                    </div>
-                    <Image
-                      className="img-fluid rounded mb-5"
-                      src={props.imageSrc}
-                      width={500} // Atur lebar gambar sesuai kebutuhan
-                      height={300} // Atur tinggi gambar sesuai kebutuhan
-                      alt="..."
-                    />
-                    <p className="mb-4">{props.description}</p>
-                    <button className="btn btn-primary" data-bs-dismiss="modal">
-                      <i className="fas fa-xmark fa-fw"></i>
-                      Close Window
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="border-t border-gray-300 flex-grow ml-2"></div>
           </div>
+          <div className="flex justify-center mb-5">
+            {" "}
+            {/* Tambahkan kelas flex dan justify-center di sini */}
+            <Image
+              className="rounded" // Menghapus mb-5 untuk menghindari jarak tambahan di bawah gambar
+              src={props.imageSrc}
+              width={500}
+              height={300}
+              alt={props.title}
+            />
+          </div>
+          <p className="mb-4 text-gray-600">{props.description}</p>
+          <button
+            className="bg-secondary text-light hover:transition-all py-2 px-4 rounded"
+            onClick={props.onClose}
+          >
+            <i className="fas fa-times fa-fw"></i>
+            Close Window
+          </button>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
-export default Modal
+export default Modal;

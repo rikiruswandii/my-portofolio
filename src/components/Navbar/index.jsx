@@ -78,21 +78,30 @@ const Navbar = () => {
         >
           <ul className="flex flex-col lg:flex-row lg:ml-auto text-white text-xl">
             <li className="nav-item mx-3">
-              <Link href="#portfolio" className="no-underline text-color-primary hover:transition-transform">
+              <Link
+                href="#portfolio"
+                className="no-underline text-color-primary hover:transition-transform"
+              >
                 <span className="nav-link cursor-pointer select-none">
                   Portofolio
                 </span>
               </Link>
             </li>
             <li className="nav-item mx-3">
-              <Link href="#about" className="no-underline text-color-primary hover:transition-transform">
+              <Link
+                href="#about"
+                className="no-underline text-color-primary hover:transition-transform"
+              >
                 <span className="nav-link cursor-pointer select-none">
                   About
                 </span>
               </Link>
             </li>
             <li className="nav-item mx-3">
-              <Link href="#contact" className="no-underline text-color-primary hover:transition-transform">
+              <Link
+                href="#skills"
+                className="no-underline text-color-primary hover:transition-transform"
+              >
                 <span className="nav-link cursor-pointer select-none">
                   Contact
                 </span>
