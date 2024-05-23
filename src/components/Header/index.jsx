@@ -1,7 +1,7 @@
 
 const Header = () => {
   return (
-    <header className="masthead bg-primary text-white text-center">
+    <header className="masthead bg-utama text-white text-center">
       <div className="container mx-auto flex flex-col items-center">
         {/* Masthead Avatar Image */}
         <img
@@ -11,7 +11,7 @@ const Header = () => {
         />
         {/* Masthead Heading */}
         <h1 className="masthead-heading text-uppercase mb-0">
-          Start Bootstrap
+          Riki Ruswandi
         </h1>
         {/* Icon Divider */}
         <div className="divider-custom divider-light flex items-center my-3">
@@ -23,7 +23,7 @@ const Header = () => {
         </div>
         {/* Masthead Subheading */}
         <p className="masthead-subheading font-light mb-0">
-          Graphic Artist - Web Designer - Illustrator
+          Web Developer - Student
         </p>
       </div>
     </header>

@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <section className="page-section bg-primary text-white mb-0" id="about">
+    <section className="page-section bg-utama text-white mb-0" id="about">
       <div className="container mx-auto">
         {/* About Section Heading */}
         <h2 className="page-section-heading text-center text-uppercase text-white">
@@ -19,29 +19,18 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-4">
             <p className="text-lg">
-              Freelancer is a free bootstrap theme created by Start Bootstrap.
-              The download includes the complete source files including HTML,
-              CSS, and JavaScript as well as optional SASS stylesheets for easy
-              customization.
+             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem adipisci quo ab exercitationem, assumenda dicta culpa aperiam nemo rem dolorum vitae amet officia explicabo praesentium ipsa unde reprehenderit eveniet nesciunt.
             </p>
           </div>
           <div className="p-4">
             <p className="text-lg">
-              You can create your own custom avatar for the masthead, change the
-              icon in the dividers, and add your email address to the contact
-              form to make it fully functional!
+             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint dignissimos perspiciatis omnis? Atque nobis cupiditate architecto consectetur rerum fugiat magnam expedita iste assumenda voluptatem adipisci voluptate, voluptas harum nostrum omnis!
             </p>
           </div>
         </div>
         {/* About Section Button */}
         <div className="text-center mt-4">
-          <a
-            href="https://startbootstrap.com/theme/freelancer/"
-            className="btn btn-xl btn-outline-light"
-          >
-            <i className="fas fa-download me-2"></i>
-            Free Download!
-          </a>
+          
         </div>
       </div>
     </section>
